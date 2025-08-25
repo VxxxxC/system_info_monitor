@@ -1,3 +1,7 @@
+# ignore IDE
+.idea
+.vscode
+
 # cargo build target
 /target
 
