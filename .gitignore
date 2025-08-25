@@ -1,1 +1,6 @@
+# cargo build target
 /target
+
+# git
+.git
+.gitignore
