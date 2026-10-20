@@ -26,13 +26,13 @@ pub fn main_layout(frame: &mut Frame) {
     frame.render_widget(os_info_outer_block, container[0]);
     frame.render_widget(os_info_inner_block, *inner);
 
-    let mut info_list = os_info::system_info();
+    let info_list = os_info::system_info();
     let mut title: Vec<String> = Vec::new();
     let mut info: Vec<String> = Vec::new();
 
-    for x in info_list.iter_mut() {
-        title.push(x.title.clone());
-        info.push(x.info.clone());
+    for x in info_list.iter() {
+        title.push(x.title.to_string());
+        info.push(x.info.to_string());
     }
 
     const LENGTH: usize = 6;
